@@ -1,0 +1,14 @@
+// informacion.html
+
+@media (max-width: $sm){
+   body{
+      main{
+         p{
+            text-align: start;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: $color6;
+         }
+      }
+   }
+}

@@ -1,0 +1,26 @@
+// Galeria.html
+
+@media (max-width: $sm){
+   body{
+      main{
+         div{
+            display: flex;
+            display: block;
+            img{
+               height: 11em;
+               width: 90%;
+               margin: 1em;
+               border: 10px solid $color3;
+            }
+         }
+         div{
+            display: flex;
+            display: block;
+            .video{
+               width: 20em;
+               height: 11em;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,24 @@
+// similares.html
+
+@media (max-width: $sm){
+   body{
+      main{
+         .div-s-i{ 
+            display: flex;
+            display: block;
+            align-items: center;
+            justify-content: center;
+         }
+         .div-e{
+            margin: 1em;
+            a{
+               display: block;
+               text-align: center;
+               margin: 0.5em;
+               font-size: 1.3em;
+               color: $color6;
+            }
+         }
+      }
+   }
+}
