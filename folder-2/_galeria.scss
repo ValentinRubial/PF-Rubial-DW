@@ -24,3 +24,25 @@
       }
    }
 }
+@media (min-width:1024px){
+   body{
+      main{
+         div{
+            display: flex;
+            padding: 1em;
+            img{
+               width: 22em;
+               height: 18em;
+               border: 1em solid $color2;
+            }
+         }
+         div{
+            .video{
+               width: 44em;
+               height: 18em;
+               border: 1em solid $color2 ;
+            }
+         } 
+      }
+   }
+}

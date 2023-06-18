@@ -62,6 +62,86 @@
     background-color: #3c7cc4;
   }
 }
+@media (min-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    background-image: url(./imagenes/aconcagua.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-areas: ". nav nav" "header header ." "main main main" "footer footer footer";
+    grid-template-rows: 10% 18% 1fr 6%;
+    grid-template-columns: 2fr 5fr 1fr;
+    gap: 1em;
+  }
+  body nav {
+    grid-area: nav;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+  }
+  body nav ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    margin: 1em;
+  }
+  body nav ul li a {
+    text-decoration: none;
+    margin: 1em;
+    font-size: 1.8em;
+    color: black;
+  }
+  body header {
+    grid-area: header;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+    padding: 1em;
+  }
+  body header h1 {
+    text-decoration: underline;
+    text-align: start;
+    font-size: 3.5em;
+  }
+  body header h2 {
+    text-decoration: underline;
+    text-align: start;
+    font-size: 2.5em;
+    padding: 0.5;
+  }
+  body main {
+    grid-area: main;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+    padding: 1em;
+  }
+  body main div {
+    display: flex;
+    justify-content: center;
+  }
+  body main div iframe {
+    margin-bottom: 1em;
+  }
+  body main div {
+    display: flex;
+    text-align: start;
+  }
+  body main div p {
+    font-size: 1.4em;
+  }
+  body footer {
+    grid-area: footer;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+    font-size: 1.8em;
+    text-align: center;
+    padding: 0.5em;
+  }
+}
 @media (max-width: 320px) {
   body main div {
     display: flex;
@@ -82,12 +162,35 @@
     height: 11em;
   }
 }
+@media (min-width: 1024px) {
+  body main div {
+    display: flex;
+    padding: 1em;
+  }
+  body main div img {
+    width: 22em;
+    height: 18em;
+    border: 1em solid #54a4e4;
+  }
+  body main div .video {
+    width: 44em;
+    height: 18em;
+    border: 1em solid #54a4e4;
+  }
+}
 @media (max-width: 320px) {
   body main p {
     text-align: start;
     font-size: 1.3em;
     font-weight: bold;
     color: black;
+  }
+}
+@media (min-width: 1024px) {
+  body main p {
+    text-align: start;
+    font-size: 1.3em;
+    font-weight: bold;
   }
 }
 @media (max-width: 320px) {
@@ -105,6 +208,13 @@
     text-align: center;
     margin: 0.5em;
     font-size: 1.3em;
+    color: black;
+  }
+}
+@media (min-width: 1024px) {
+  body main .div-e a {
+    margin: 2em;
+    font-size: 2em;
     color: black;
   }
 }

@@ -22,3 +22,16 @@
       }
    }
 }
+@media (min-width:1024px){
+   body{
+      main{
+         .div-e{
+            a{
+               margin: 2em;
+               font-size: 2em;
+               color: $color6;
+            }
+         }
+      }
+   }
+}
