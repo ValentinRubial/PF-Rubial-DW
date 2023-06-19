@@ -111,13 +111,28 @@
             display: flex;
             justify-content: end;
             list-style: none;
-            margin: 1em;
+            margin: 1.5em;
             li{
                a{
                   text-decoration: none;
-                  margin: 1em;
+                  margin: 20px;
                   font-size: 1.8em;
                   color: $color6;
+               }
+               a::after{
+                  content: '';
+                  width: 0;
+                  height: 5px;
+                  background-color: white;
+                  margin: 8.4px;
+                  display: block;
+               }
+               a:hover::after{
+                  width: 100%;
+                  transition: width 0.4s;
+               }
+               a:hover{
+                  color: white;
                }
             }
          }
@@ -130,13 +145,29 @@
             text-decoration: underline;
             text-align: start;
             font-size: 3.5em;
+            animation-name: cambiarcolor;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
          }
          h2{
             text-decoration: underline;
             text-align: start;
             font-size: 2.5em;
             padding: 0.5;
+            animation-name: cambiarcolor;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
          }
+         @keyframes cambiarcolor{
+            0%{
+               color: white;
+            }
+            100%{
+               color: black;
+            }
+         }  
       }
       main{
          grid-area: main;

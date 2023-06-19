@@ -91,13 +91,28 @@
     display: flex;
     justify-content: end;
     list-style: none;
-    margin: 1em;
+    margin: 1.5em;
   }
   body nav ul li a {
     text-decoration: none;
-    margin: 1em;
+    margin: 20px;
     font-size: 1.8em;
     color: black;
+  }
+  body nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: white;
+    margin: 8.4px;
+    display: block;
+  }
+  body nav ul li a:hover::after {
+    width: 100%;
+    transition: width 0.4s;
+  }
+  body nav ul li a:hover {
+    color: white;
   }
   body header {
     grid-area: header;
@@ -108,12 +123,28 @@
     text-decoration: underline;
     text-align: start;
     font-size: 3.5em;
+    animation-name: cambiarcolor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
   body header h2 {
     text-decoration: underline;
     text-align: start;
     font-size: 2.5em;
     padding: 0.5;
+    animation-name: cambiarcolor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes cambiarcolor {
+    0% {
+      color: white;
+    }
+    100% {
+      color: black;
+    }
   }
   body main {
     grid-area: main;
@@ -189,7 +220,7 @@
 @media (min-width: 1024px) {
   body main p {
     text-align: start;
-    font-size: 1.3em;
+    font-size: 1.6em;
     font-weight: bold;
   }
 }
@@ -216,6 +247,9 @@
     margin: 2em;
     font-size: 2em;
     color: black;
+  }
+  body main .div-e a:hover {
+    color: white;
   }
 }
 
