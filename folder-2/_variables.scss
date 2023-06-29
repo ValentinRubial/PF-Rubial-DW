@@ -7,4 +7,10 @@ $color6: black;
 
 $opacity1: #3c7cc48a;
 
-$sm: 320px;
+// use el mixin para pas imagenes y el video
+@mixin imagen($ancho, $alto){
+   width: $ancho;
+   height: $alto;
+   margin: 1em;
+   border: 10px solid $color3;
+}

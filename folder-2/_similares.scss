@@ -1,38 +1,139 @@
 // similares.html
 
-@media (max-width: $sm){
+@media (max-width: 480px){
    body{
       main{
-         .div-s-i{ 
+         .div-s-i{
             display: flex;
-            display: block;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            img{
+               @include imagen(340px, 200px)
+            }
          }
          .div-e{
-            margin: 1em;
+            display: flex;
+            flex-direction: column;
+            padding: 2em;
             a{
-               display: block;
-               text-align: center;
-               margin: 0.5em;
-               font-size: 1.3em;
                color: $color6;
+               font-size: 1.4em;
+               margin: 1em;
+               text-align: center;
             }
          }
       }
    }
 }
-@media (min-width:1024px){
+@media(max-width:767px)and (min-width:481px){
    body{
       main{
+         .div-s-i{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img{
+               @include imagen(400px, 250px)
+            }
+         }
          .div-e{
+            display: flex;
+            flex-direction: column;
+            padding: 2em;
             a{
-               margin: 2em;
-               font-size: 2em;
                color: $color6;
+               font-size: 1.4em;
+               margin: 1em;
+               text-align: center;
+            }
+         }
+      }
+   }
+}
+@media (min-width: 768px)and (max-width: 1024px){
+   body{
+      main{
+         .div-s-i{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img{
+               @include imagen(400px, 250px)
+            }
+         }
+         .div-e{
+            display: flex;
+            flex-direction: row;
+            padding: 2em;
+            a{
+               color: $color6;
+               font-size: 1.4em;
+               margin: 1em;
+               text-align: center;
+            }
+         }
+      }
+   }
+}
+
+
+@media (min-width: 1025px)and (max-width: 1366px){
+   body{
+      main{
+         .div-s-i{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img{
+               @include imagen(400px, 250px)
+            }  
+         }
+         .div-e{
+            display: flex;
+            flex-direction: row;
+            padding: 2em;
+            a{
+               color: $color6;
+               font-size: 1.4em;
+               margin: 1em;
+               text-align: center;
             }
             a:hover{
                color: white;
+            }
+         }
+      }
+   }
+}
+@media (min-width: 1367px){
+   body{
+      main{
+         .div-s-i{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .img{
+               width: 400px;
+               height: 300px;
+            }
+         }
+         .div-e{
+            display: flex;
+            flex-direction: row;
+            padding: 0.5em;
+            a{
+               color: $color6;
+               font-size: 2em;
+               margin: 2.5em;
+               text-align: center;
+            }
+            a:hover{
+                  color: white;
             }
          }
       }

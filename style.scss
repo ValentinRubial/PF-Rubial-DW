@@ -3,3 +3,16 @@
 @import 'folder-2/galeria';
 @import 'folder-2/informacion';
 @import 'folder-2/similares';
+
+// solo use el extend para la media queri de min-width: 1367px en las paginas de galeria.html Y similares.html
+
+.extend-galeria{
+   margin: 1em;
+   border: 10px solid $color3;
+}
+.img{
+   @extend .extend-galeria
+}
+.video{
+   @extend .extend-galeria
+}

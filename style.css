@@ -1,11 +1,8 @@
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  html {
-    height: 100%;
   }
   body {
     background-color: #a4c4d4;
@@ -14,62 +11,131 @@
     display: grid;
     gap: 1em;
     grid-template-areas: "nav" "header" "main" "footer";
-    grid-template-rows: 1fr 15% 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
   }
   body nav {
     grid-area: nav;
-    text-align: end;
-    font-size: 1.3em;
     background-color: #3c7cc4;
   }
   body nav ul {
     display: flex;
-    text-align: center;
+    justify-content: end;
     list-style: none;
-  }
-  body nav ul li {
-    margin: 3px;
   }
   body nav ul li a {
     text-decoration: none;
     color: black;
+    font-size: 1.2em;
+    margin: 0.5em;
   }
   body header {
     grid-area: header;
-    text-align: center;
-    font-size: 1.4em;
-    padding: 1em;
-    text-decoration: underline;
     background-color: #3c7cc4;
+    padding: 1em;
+  }
+  body header h1 {
+    font-size: 2.5em;
+    text-decoration: underline;
+  }
+  body header h2 {
+    font-size: 2em;
+    text-decoration: underline;
   }
   body main {
     grid-area: main;
     background-color: #3c7cc4;
+    padding: 1em;
+  }
+  body main div {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
   }
   body main div iframe {
-    padding: 1em;
-    width: 100%;
-    height: 15em;
+    width: 400px;
+    height: 350px;
   }
   body main div p {
-    text-align: center;
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   body footer {
     grid-area: footer;
-    text-align: center;
-    font-size: 1.4em;
     background-color: #3c7cc4;
+    font-size: 1.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
-@media (min-width: 1024px) {
+@media (max-width: 767px) and (min-width: 481px) {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  html {
+  body {
+    background-color: #a4c4d4;
+    font-family: "Times New Roman", Times, serif;
     height: 100%;
+    display: grid;
+    gap: 1em;
+    grid-template-areas: "nav" "header" "main" "footer";
+    grid-template-rows: auto auto 1fr auto;
+  }
+  body nav {
+    grid-area: nav;
+    background-color: #3c7cc4;
+  }
+  body nav ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+  }
+  body nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    margin: 1em;
+  }
+  body header {
+    grid-area: header;
+    background-color: #3c7cc4;
+    padding: 1em;
+  }
+  body header h1 {
+    font-size: 2.5em;
+    text-decoration: underline;
+  }
+  body header h2 {
+    font-size: 2em;
+    text-decoration: underline;
+  }
+  body main {
+    grid-area: main;
+    background-color: #3c7cc4;
+    padding: 1em;
+  }
+  body main div {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+  }
+  body main div p {
+    font-size: 1.2em;
+  }
+  body footer {
+    grid-area: footer;
+    background-color: #3c7cc4;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   body {
     background-image: url(./imagenes/aconcagua.jpg);
@@ -78,9 +144,9 @@
     background-size: cover;
     background-attachment: fixed;
     display: grid;
-    grid-template-areas: ". nav nav" "header header ." "main main main" "footer footer footer";
-    grid-template-rows: 10% 18% 1fr 6%;
-    grid-template-columns: 2fr 5fr 1fr;
+    grid-template-areas: "nav nav nav" "header header header" ". main ." "footer footer footer";
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: auto auto auto;
     gap: 1em;
   }
   body nav {
@@ -89,13 +155,86 @@
   }
   body nav ul {
     display: flex;
-    justify-content: end;
+    justify-content: start;
     list-style: none;
-    margin: 1.5em;
+    padding: 1em;
   }
   body nav ul li a {
     text-decoration: none;
-    margin: 20px;
+    margin: 0.5em;
+    font-size: 1.8em;
+    color: black;
+  }
+  body header {
+    grid-area: header;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+    padding: 1em;
+  }
+  body header h1 {
+    font-size: 2.5em;
+    text-align: center;
+    text-decoration: underline;
+  }
+  body header h2 {
+    font-size: 2em;
+    text-align: center;
+    text-decoration: underline;
+  }
+  body main {
+    grid-area: main;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+  }
+  body main div {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+  }
+  body main div iframe {
+    width: 550px;
+    height: 500px;
+  }
+  body main div p {
+    font-size: 1.2em;
+  }
+  body footer {
+    grid-area: footer;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+    font-size: 2em;
+    text-align: center;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-image: url(./imagenes/aconcagua.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-areas: "nav nav nav" "header header header" ". main ." "footer footer footer";
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: auto auto auto;
+    gap: 1em;
+  }
+  body nav {
+    grid-area: nav;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+  }
+  body nav ul {
+    display: flex;
+    justify-content: start;
+    list-style: none;
+  }
+  body nav ul li {
+    margin: 1em;
+  }
+  body nav ul li a {
+    text-decoration: none;
     font-size: 1.8em;
     color: black;
   }
@@ -121,7 +260,7 @@
   }
   body header h1 {
     text-decoration: underline;
-    text-align: start;
+    text-align: center;
     font-size: 3.5em;
     animation-name: cambiarcolor;
     animation-duration: 4s;
@@ -130,7 +269,7 @@
   }
   body header h2 {
     text-decoration: underline;
-    text-align: start;
+    text-align: center;
     font-size: 2.5em;
     padding: 0.5;
     animation-name: cambiarcolor;
@@ -173,84 +312,373 @@
     padding: 0.5em;
   }
 }
-@media (max-width: 320px) {
-  body main div {
+@media (min-width: 1367px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-image: url(./imagenes/aconcagua.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-areas: "nav nav nav" "header header header" ". main ." "footer footer footer";
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: auto auto auto;
+    gap: 1em;
+  }
+  body nav {
+    grid-area: nav;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+  }
+  body nav ul {
     display: flex;
+    justify-content: start;
+    list-style: none;
+  }
+  body nav ul li {
+    margin: 1em;
+  }
+  body nav ul li a {
+    text-decoration: none;
+    font-size: 1.8em;
+    color: black;
+  }
+  body nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: 2px;
     display: block;
   }
-  body main div img {
-    height: 11em;
-    width: 90%;
+  body nav ul li a:hover::after {
+    width: 100%;
+    transition: width 0.4s;
+  }
+  body nav ul li a:hover {
+    color: white;
+  }
+  body header {
+    grid-area: header;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+    padding: 1em;
+  }
+  body header h1 {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 3.5em;
+    animation-name: cambiarcolor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  body header h2 {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 2.5em;
+    padding: 0.5;
+    animation-name: cambiarcolor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes cambiarcolor {
+    0% {
+      color: white;
+    }
+    100% {
+      color: black;
+    }
+  }
+  body main {
+    grid-area: main;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+    padding: 1em;
+  }
+  body main div {
+    display: flex;
+    justify-content: center;
+  }
+  body main div iframe {
+    width: 800px;
+    height: 500px;
+  }
+  body main div {
+    display: flex;
+    text-align: start;
+  }
+  body main div p {
+    font-size: 1.4em;
+    padding: 1em;
+  }
+  body footer {
+    grid-area: footer;
+    background-color: rgba(60, 124, 196, 0.5411764706);
+    font-size: 1.8em;
+    text-align: center;
+    padding: 0.5em;
+  }
+}
+@media (max-width: 480px) {
+  body main .div-g {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .div-g img {
+    width: 340px;
+    height: 200px;
     margin: 1em;
     border: 10px solid #143464;
   }
-  body main div {
+  body main div .video {
+    width: 380px;
+    height: 200px;
+    margin: 1em;
+    border: 10px solid #143464;
+  }
+}
+@media (max-width: 767px) and (min-width: 481px) {
+  body main .div-g {
     display: flex;
-    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .div-g img {
+    width: 400px;
+    height: 250px;
+    margin: 1em;
+    border: 10px solid #143464;
   }
   body main div .video {
-    width: 20em;
-    height: 11em;
+    width: 450px;
+    height: 300px;
+    margin: 1em;
+    border: 10px solid #143464;
   }
 }
-@media (min-width: 1024px) {
-  body main div {
+@media (min-width: 768px) and (max-width: 1024px) {
+  main .div-g {
     display: flex;
-    padding: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  body main div img {
-    width: 22em;
-    height: 18em;
-    border: 1em solid #54a4e4;
+  main .div-g img {
+    width: 400px;
+    height: 250px;
+    margin: 1em;
+    border: 10px solid #143464;
+  }
+  main div .video {
+    width: 450px;
+    height: 300px;
+    margin: 1em;
+    border: 10px solid #143464;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  body main .div-g {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .div-g img {
+    width: 400px;
+    height: 250px;
+    margin: 1em;
+    border: 10px solid #143464;
   }
   body main div .video {
-    width: 44em;
-    height: 18em;
-    border: 1em solid #54a4e4;
+    width: 450px;
+    height: 300px;
+    margin: 1em;
+    border: 10px solid #143464;
   }
 }
-@media (max-width: 320px) {
+@media (min-width: 1367px) {
+  body .div-g {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  body .div-g .img {
+    width: 300px;
+    height: 200px;
+  }
+  body div .video {
+    width: 500px;
+    height: 250px;
+  }
+}
+@media (max-width: 480px) {
   body main p {
-    text-align: start;
-    font-size: 1.3em;
-    font-weight: bold;
-    color: black;
+    font-size: 1.2em;
   }
 }
-@media (min-width: 1024px) {
+@media (max-width: 767px) and (min-width: 481px) {
   body main p {
-    text-align: start;
-    font-size: 1.6em;
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body main p {
+    font-size: 1.2em;
     font-weight: bold;
   }
 }
-@media (max-width: 320px) {
+@media (min-width: 1025px) and (max-width: 1366px) {
+  body main p {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+}
+@media (min-width: 1367px) {
+  body main p {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+}
+@media (max-width: 480px) {
   body main .div-s-i {
     display: flex;
-    display: block;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+  body main .div-s-i img {
+    width: 340px;
+    height: 200px;
+    margin: 1em;
+    border: 10px solid #143464;
   }
   body main .div-e {
-    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
   }
   body main .div-e a {
-    display: block;
-    text-align: center;
-    margin: 0.5em;
-    font-size: 1.3em;
     color: black;
+    font-size: 1.4em;
+    margin: 1em;
+    text-align: center;
   }
 }
-@media (min-width: 1024px) {
+@media (max-width: 767px) and (min-width: 481px) {
+  body main .div-s-i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .div-s-i img {
+    width: 400px;
+    height: 250px;
+    margin: 1em;
+    border: 10px solid #143464;
+  }
+  body main .div-e {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+  }
   body main .div-e a {
-    margin: 2em;
-    font-size: 2em;
     color: black;
+    font-size: 1.4em;
+    margin: 1em;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body main .div-s-i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .div-s-i img {
+    width: 400px;
+    height: 250px;
+    margin: 1em;
+    border: 10px solid #143464;
+  }
+  body main .div-e {
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+  }
+  body main .div-e a {
+    color: black;
+    font-size: 1.4em;
+    margin: 1em;
+    text-align: center;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  body main .div-s-i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .div-s-i img {
+    width: 400px;
+    height: 250px;
+    margin: 1em;
+    border: 10px solid #143464;
+  }
+  body main .div-e {
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+  }
+  body main .div-e a {
+    color: black;
+    font-size: 1.4em;
+    margin: 1em;
+    text-align: center;
   }
   body main .div-e a:hover {
     color: white;
   }
+}
+@media (min-width: 1367px) {
+  body main .div-s-i {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .div-s-i .img {
+    width: 400px;
+    height: 300px;
+  }
+  body main .div-e {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em;
+  }
+  body main .div-e a {
+    color: black;
+    font-size: 2em;
+    margin: 2.5em;
+    text-align: center;
+  }
+  body main .div-e a:hover {
+    color: white;
+  }
+}
+.extend-galeria, .video, .img {
+  margin: 1em;
+  border: 10px solid #143464;
 }
 
 /*# sourceMappingURL=style.css.map */
